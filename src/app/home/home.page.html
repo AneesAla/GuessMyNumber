@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">Welcome to Guess My Numbers Game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
+  <div class="welcome-message">
+    <h2 class="ion-text-underline">Let the Game Begin!</h2>
+    <p class="ion-padding">Try to guess the randomly generated number within a specified range.</p>
+  </div>
+
+  <div class="game-rules ion-padding ion-text-center">
+    <h3>Game Rules:</h3>
+
+    <ion-list lines="none">
+      <ion-item>1. The game will randomly generate a number between 1 and 100.</ion-item>
+      <ion-item>2. You have a maximum of 10 attempts to guess the correct number.</ion-item>
+      <ion-item>3. After each guess, the game will provide feedback (too high, too low, correct).</ion-item>
+      <ion-item>4. Your objective is to guess the correct number in as few attempts as possible.</ion-item>
+      <ion-item>5. If you don't guess the correct number within 10 attempts, you lose the game.</ion-item>
+    </ion-list>
+  </div>
+
+  <ion-button expand="full" size="large" color="secondary" (click)="startGame()">
+    Start Game
+  </ion-button>
+</ion-content>
+

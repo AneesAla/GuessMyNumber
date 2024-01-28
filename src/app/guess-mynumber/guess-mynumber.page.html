@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Guess My Number Game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding ion-text-center">
+  <div class="game-info ion-padding">
+    <h2>Guess My Number Game</h2>
+    <p>Guess the correct number between 1 and 100 in as few attempts as possible!</p>
+    <p>Attempts: {{ attempts }}</p>
+    <p>{{ feedbackMessage }}</p>
+  </div>
+
+  <ion-item class="ion-padding">
+    <ion-label position="floating">Enter Your Guess</ion-label>
+    <ion-input [(ngModel)]="playerGuess" type="number" min="1" max="100"></ion-input>
+  </ion-item>
+
+  <ion-button expand="full" size="large" color="primary" (click)="processGuess()">
+    Submit Guess
+  </ion-button>
+
+  <ion-button expand="full" size="large" color="danger" (click)="initializeGame()">
+    Reset Game
+  </ion-button>
+
+  <ion-button expand="full" size="large" color="medium" (click)="goBackToHome()">
+    Back to Home
+  </ion-button>
+</ion-content>
+
