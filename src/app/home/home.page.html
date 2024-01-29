@@ -14,16 +14,59 @@
     <h3>Game Rules:</h3>
 
     <ion-list lines="none">
-      <ion-item>1. The game will randomly generate a number between 1 and 100.</ion-item>
-      <ion-item>2. You have a maximum of 10 attempts to guess the correct number.</ion-item>
-      <ion-item>3. After each guess, the game will provide feedback (too high, too low, correct).</ion-item>
-      <ion-item>4. Your objective is to guess the correct number in as few attempts as possible.</ion-item>
-      <ion-item>5. If you don't guess the correct number within 10 attempts, you lose the game.</ion-item>
+
+      <ion-item>
+        <strong>Easy Mode<br>(1-10)</strong>
+        <p>
+          1. The game will randomly generate a number between 1 and 10.
+          <br>
+          2. You have a maximum of 3 attempts to guess the correct number.
+          <br>
+          3. After each guess, the game will provide feedback (too high, too low, correct).
+          <br>
+          4. Your objective is to guess the correct number in as few attempts as possible.
+          <br>
+          5. If you don't guess the correct number within 3 attempts, you lose the game.
+        </p>
+      </ion-item>
+    
+      <ion-item>
+        <strong>Medium Mode<br>(1-100)</strong>
+        <p>
+          1. The game will randomly generate a number between 1 and 100.
+          <br>
+          2. You have a maximum of 7 attempts to guess the correct number.
+          <br>
+          3. After each guess, the game will provide feedback (too high, too low, correct).
+          <br>
+          4. Your objective is to guess the correct number in as few attempts as possible.
+          <br>
+          5. If you don't guess the correct number within 7 attempts, you lose the game.
+        </p>
+      </ion-item>
+    
+      <ion-item>
+        <strong>Hard Mode<br>(1-1000)</strong>
+        <p>
+          1. The game will randomly generate a number between 1 and 1000.
+          <br>
+          2. You have a maximum of 10 attempts to guess the correct number.
+          <br>
+          3. After each guess, the game will provide feedback (too high, too low, correct).
+          <br>
+          4. Your objective is to guess the correct number in as few attempts as possible.
+          <br>
+          5. If you don't guess the correct number within 10 attempts, you lose the game.
+        </p>
+      </ion-item>
+    
     </ion-list>
+    
   </div>
 
-  <ion-button expand="full" size="large" color="secondary" (click)="startGame()">
-    Start Game
-  </ion-button>
+  <ion-button expand="full" size="large" color="success" (click)="startGame()">Start Easy Game</ion-button>
+  <ion-button expand="full" size="large" color="warning" (click)="startGame()">Start Medium Game</ion-button>
+  <ion-button expand="full" size="large" color="danger" (click)="startGame()">Start HARD Game</ion-button>
+  
 </ion-content>
 
